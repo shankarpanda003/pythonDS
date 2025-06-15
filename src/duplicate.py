@@ -12,6 +12,7 @@
 # Output: 3
 # Explanation: The number 3 appears more than once in the array.
 
+#still a oprimises approach using hashmap
 def find_duplicates(arr):
     hashmap={}
     for i in range(len(arr)):
