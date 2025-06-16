@@ -31,10 +31,9 @@ if __name__ == "__main__":
     print(sortedrotatedarray(arr))
 
 #put this as table Graphical Table Example:
-```markdown
-| low | mid | high | arr[mid] | arr[high] | Action                                 |
-|-----|-----|------|----------|-----------|----------------------------------------|
-| 0   | 2   | 5    | 1        | 4         | arr[mid] < arr[high], move high to mid |
-| 0   | 1   | 2    | 6        | 1         | arr[mid] > arr[high], move low to mid+1|
-| 2   | 2   | 2    | 1        | 1         | low == high, found minimum             |
-```
+
+```| low | high | mid | arr[mid] | arr[high] | Action                                 |
+|-----|------|-----|----------|-----------|----------------------------------------|
+| 0   | 5    | 2   | 1        | 4         | arr[mid] < arr[high], move high to mid |
+| 0   | 2    | 1   | 6        | 1         | arr[mid] > arr[high], move low to mid+1|
+| 2   | 2    | 2   | 1        | 1         | low == high, found minimum             |
