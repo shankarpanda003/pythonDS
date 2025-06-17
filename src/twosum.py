@@ -3,6 +3,8 @@
 #nput: arr[] = [0, -1, 2, -3, 1], target = -2
 #Output: true
 #Explanation: There is a pair (1, -3) with the sum equal to given target, 1 + (-3) = -2.
+from operator import truediv
+
 
 #brute force
 def two_sum(arr, target):
@@ -47,4 +49,24 @@ if __name__ == "__main__":
 #Time Complexity: O(n), for using a single loop
 #Space Complexity: O(n), for using a hash map to store the elements and their indices
 
+#using two pointer
+
+def twopointersum(arr,target):
+    arr=sorted(arr)
+    print(arr)
+    n=len(arr)-1
+    left, right= 0,n
+    print(left,right)
+    while left < right:
+        if arr[left] + arr[right] == target:
+            return True
+        elif arr[left] + arr[right] > target:
+            right=right-1
+        else:
+            left=left+1
+    return False
+if __name__ == "__main__":
+    arr = [0, -1, 2, -3, 1]
+    target =  -2
+    print(twopointersum(arr,target))
 
