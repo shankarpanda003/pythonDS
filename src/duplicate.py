@@ -48,6 +48,6 @@ def find_duplicates(arr):
     return duplicates
 
 if __name__ == "__main__":
-    arr = [2,8,9,3,8]
+    arr = [1,2,3,2,4,1]
     # The marking technique only works correctly if all elements are in the range 0 to n-1 (here, n=5, so valid values are 0 to 4).
     print(find_duplicates(arr))  # Output: [1, 3, 6]
