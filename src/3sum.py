@@ -37,19 +37,26 @@ if __name__ == "__main__":
 
 
 def threepointersum(arr,target):
+    orig_arr=arr
     arr=sorted(arr)
+    char_index=[]
+    print(arr)
     for i in range(len(arr)-2):
-        diff= target-arr[i]
+        lookforsum=target-arr[i]
+        print('lookforsum',lookforsum)
         left=i+1
         right=len(arr)-1
-        while left < right:
-            if arr[left] + arr[right] == diff:
-                return True
-            elif arr[left] + arr[right] > diff:
+        print(left,right)
+        while left<right:
+            print(arr[left],arr[right])
+            if arr[left]+arr[right] ==  lookforsum:
+                char_index.append([orig_arr.index(arr[i]),orig_arr.index(arr[left]),orig_arr.index(arr[right])])
+                break
+            elif arr[left]+arr[right] > lookforsum:
                 right = right-1
             else:
-                left = left+1
-    return False
+                left= left+1
+    return char_index
 
 if __name__ == "__main__":
     arr=[2, 3, 1, 0, 5]
