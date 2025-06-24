@@ -1,18 +1,14 @@
-def longest_common_prefix(strs):
+def longest_common_prefix_sorted(strs):
     if not strs:
         return ""
-    
-    # Start with the first string as a prefix
-    prefix = strs[0]
-    
-    for s in strs[1:]:
-        # Reduce the prefix until it matches the beginning of s
-        while not s.startswith(prefix):
-            prefix = prefix[:-1]
-            if prefix == "":
-                return ""
-    return prefix
+    strs.sort()
+    first = strs[0]
+    last = strs[-1]
+    i = 0
+    while i < len(first) and i < len(last) and first[i] == last[i]:
+        i += 1
+    return first[:i]
 
 # Example usage:
 words = ["flower", "flow", "flight"]
-print(longest_common_prefix(words))  # Output: "fl"
+print(longest_common_prefix_sorted(words))  # Output: "fl"
