@@ -22,6 +22,7 @@ def mergeinterval(arr):
         curr=arr[i]
         if res[-1][1] >= curr [0]:
             res[-1][1] = max(curr[1],res[-1][1])
+            res[-1][0] = min(curr[0],res[-1][0])
         else:
             res.append(curr)
     return res
