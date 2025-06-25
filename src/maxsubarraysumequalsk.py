@@ -7,13 +7,13 @@ def subarray_sum_equals_k(nums, k):
     print('after', sum_freq)
 
     for num in nums:
-        curr_sum += num
+        curr_sum = curr_sum + num
         if curr_sum - k in sum_freq:
-            count += sum_freq[curr_sum - k]
+            count = count + sum_freq[curr_sum - k]
         if curr_sum in sum_freq:
-            sum_freq[curr_sum] += 1
+            sum_freq[curr_sum] = sum_freq[curr_sum] + 1
         else:
-            sum_freq[curr_sum] = 1
+            sum_freq[curr_sum] = 1  # Initialize the count for new curr_sum
 
     return count
 
