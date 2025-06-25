@@ -1,14 +1,19 @@
 def subarray_sum_equals_k(nums, k):
-    from collections import defaultdict
     count = 0
     curr_sum = 0
-    sum_freq = defaultdict(int)
+    sum_freq = {}
+    print('before', sum_freq)
     sum_freq[0] = 1
+    print('after', sum_freq)
 
     for num in nums:
         curr_sum += num
-        count += sum_freq[curr_sum - k]
-        sum_freq[curr_sum] += 1
+        if curr_sum - k in sum_freq:
+            count += sum_freq[curr_sum - k]
+        if curr_sum in sum_freq:
+            sum_freq[curr_sum] += 1
+        else:
+            sum_freq[curr_sum] = 1
 
     return count
 
