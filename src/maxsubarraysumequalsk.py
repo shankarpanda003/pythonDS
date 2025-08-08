@@ -11,6 +11,7 @@ def subarray_sum_equals_k(nums, k):
             sum_freq[curr_sum]=sum_freq[curr_sum]+1
         else:
             sum_freq[curr_sum]=1
+        print(sum_freq)
     return count
 
 # Example usage

@@ -1,6 +1,7 @@
 # Chocolate Distribution Problem
 # Last Updated : 25 Feb, 2025
-# Given an array arr[] of n integers where arr[i] represents the number of chocolates in ith packet. Each packet can have a variable number of chocolates. There are m students, the task is to distribute chocolate packets such that:
+# Given an array arr[] of n integers where arr[i] represents the number of chocolates in ith packet.
+# Each packet can have a variable number of chocolates. There are m students, the task is to distribute chocolate packets such that:
 #
 # Each student gets exactly one packet.
 # The difference between the maximum and minimum number of chocolates in the packets given to the students is minimized.

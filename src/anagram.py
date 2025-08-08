@@ -1,9 +1,14 @@
-def group_anagrams(strs):
-    anagram_map = {}
-    for s in strs:
-        sorted_s = ''.join(sorted(s))
-        print(s,sorted_s)
-        anagram_map.setdefault(sorted_s, []).append(s)
-    return list(anagram_map.values())
+def group_anagrams(words):
+    groups = {}
 
+    for word in words:
+        key = ''.join(sorted(word))  # Sort the word to create a key
+        print(word,key)
+        if key not in groups:
+            groups[key] = []
+        groups[key].append(word)     # Add the word to the group
+
+    return list(groups.values())
+
+# Example usage
 print(group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
