@@ -7,9 +7,12 @@ def findsubstring(s1,s2):
     s1_counts = [0]*26
     s2_counts = [0]*26
 
+
     for i in range(n1):
         s1_counts[ord(s1[i])-97] += 1
         s2_counts[ord(s2[i])-97] += 1
+    print(s1_counts)
+    print(s2_counts)
 
     if s1_counts == s2_counts:
         return True
@@ -18,6 +21,8 @@ def findsubstring(s1,s2):
         print(i)
         s2_counts[ord(s2[i])-97] += 1
         s2_counts[ord(s2[i-n1])-97] -= 1
+        print(s1_counts)
+        print(s2_counts)
         if s1_counts == s2_counts:
             return True
     return False

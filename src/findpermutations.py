@@ -1,21 +1,24 @@
-def permute(s):
-    result = []
-    def backtrack(path, remaining):
-        if not remaining:
-            result.append(path)
-            return
-        for i in range(len(remaining)):
-            print("path",path + remaining[i])
-            print("remaining",remaining[:i] + remaining[i+1:])
-            backtrack(path + remaining[i], remaining[:i] + remaining[i+1:])
-    backtrack("", s)
-    return result
+def get_permutations(s):
+    # Base case: if string length is 1, only one permutation
+    if len(s) == 1:
+        return [s]
 
-# Example usage
+    perms = []
+    for i in range(len(s)):
+        # Choose 1 character
+        char = s[i]
+        # Remaining string after removing the chosen character
+        remaining = s[:i] + s[i+1:]
+        print("remaining",remaining)
+        # Recurse to get permutations of the remaining string
+        for p in get_permutations(remaining):
+            perms.append(char + p)
+            print(perms)
+
+    return perms
+
 if __name__ == "__main__":
     s = "abc"
-    print(permute(s))
-
-
-a, bc
-ab,ac
+    result = get_permutations(s)
+    print(result)
+    print(f"Total permutations: {len(result)}")
