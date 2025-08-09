@@ -2,11 +2,11 @@ def isPalindrome(s):
     left=0
     right=len(s)-1
     while left<right:
-        while left < right and not isAlphanumeric(s[left]):
+        if left < right and not isAlphanumeric(s[left]):
             left += 1
-        while right>left and not isAlphanumeric(s[right]):
+        if right>left and not isAlphanumeric(s[right]):
             right -= 1
-
+        print(left)
         if s[left].lower() != s[right].lower():
             return False
         left=left+1
@@ -19,4 +19,4 @@ def isAlphanumeric(s):
 
 
 if __name__ == "__main__":
-    print(isPalindrome('raceacar'))
+    print(isPalindrome('racecar'))
