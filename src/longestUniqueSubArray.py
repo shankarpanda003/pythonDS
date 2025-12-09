@@ -1,3 +1,11 @@
+# Input: arr[] = {1, 2, 3, 4, 5, 1, 2, 3}
+# Output: 5
+# Explanation: One possible subarray is {1, 2, 3, 4, 5}.
+
+# Input: arr[]={1, 2, 4, 4, 5, 6, 7, 8, 3, 4, 5, 3, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4}
+# Output: 8
+# Explanation: Only possible subarray is {3, 4, 5, 6, 7, 8, 1, 2}.
+
 def longest_unique_subarray(arr):
     seen = set()
     left = 0
