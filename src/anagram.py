@@ -7,7 +7,6 @@ def group_anagrams(words):
         if key not in groups:
             groups[key] = []
         groups[key].append(word)     # Add the word to the group
-
     return list(groups.values())
 
 # Example usage

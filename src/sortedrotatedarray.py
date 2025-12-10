@@ -29,11 +29,3 @@ def sortedrotatedarray(arr):
 if __name__ == "__main__":
     arr=[12,13,14,9,10,11]
     print(sortedrotatedarray(arr))
-
-#put this as table Graphical Table Example:
-
-```| low | high | mid | arr[mid] | arr[high] | Action                                 |
-|-----|------|-----|----------|-----------|----------------------------------------|
-| 0   | 5    | 2   | 1        | 4         | arr[mid] < arr[high], move high to mid |
-| 0   | 2    | 1   | 6        | 1         | arr[mid] > arr[high], move low to mid+1|
-| 2   | 2    | 2   | 1        | 1         | low == high, found minimum             |

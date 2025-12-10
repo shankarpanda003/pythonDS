@@ -7,7 +7,6 @@ def findsubstring(s1,s2):
     s1_counts = [0]*26
     s2_counts = [0]*26
 
-
     for i in range(n1):
         s1_counts[ord(s1[i])-97] += 1
         s2_counts[ord(s2[i])-97] += 1
