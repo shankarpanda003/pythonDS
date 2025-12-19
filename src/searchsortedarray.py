@@ -4,10 +4,10 @@ def binary_search(arr, key):
         mid = (low + high) // 2
         if arr[mid] == key:
             return mid  # Key found, return index
-        elif arr[mid] < key:
-            low = mid + 1
-        else:
+        elif arr[mid] > key:
             high = mid - 1
+        else:
+            low = mid + 1
     return -1  # Key not found
 
 # Example usage:
